@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal - Funcionários</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-icons">
+      <a href="tela_inicial.html"><i class="fas fa-home"></i> Página inicial</a>
+      <a href="funcionarios.html"><i class="fas fa-users"></i> Funcionários</a>
+      <a href="#" id="openCalendar"><i class="fas fa-calendar"></i> Calendário</a>
+      <a href="#" id="openInbox"><i class="fas fa-inbox"></i> Caixa de Entrada</a>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="#"><i class="fas fa-cog"></i> Configurações</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <div class="navbar">
+        <div class="title">DF KORPS SECURITY</div>
+        <div class="search-bar">
+          <input type="text" id="searchBar" placeholder="Procurar...">
+        </div>
+        <div class="user-info">
+          <i class="fas fa-user-circle"></i> Flavio Augusto
+        </div>
+      </div>
+    </header>
+
+    <section class="table-section">
+      <h2>Funcionários</h2>
+      <input type="file" id="csvFileInput" accept=".csv" />
+      <button id="importCsvButton">Importar CSV</button>
+      <button id="saveCsvButton">Salvar CSV</button>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Status</th>
+            <th>Nome</th>
+            <th>Trabalho</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Horário</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

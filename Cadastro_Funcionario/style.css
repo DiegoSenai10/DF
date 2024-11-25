@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Seção Esquerda */
+.left-section {
+    flex: 1;
+    background: linear-gradient(to bottom right, #0F1A55 0%, #0A6972 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.left-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in;
+}
+
+.left-section p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Botão de saiba mais */
+.saiba-mais {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3f7fbf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.saiba-mais:hover {
+    background-color: #275a8f;
+}
+
+/* Seção Direita */
+.right-section {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+}
+
+.right-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0A6972;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 300px;
+}
+
+form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botão */
+form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Esqueci a senha */
+.forgot-password {
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        flex: none;
+        width: 100%;
+    }
+
+    .left-section {
+        padding: 40px;
+    }
+
+    .right-section {
+        padding: 20px;
+        box-shadow: none;
+    }
+}
